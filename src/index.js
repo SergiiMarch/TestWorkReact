@@ -6,31 +6,46 @@ import data from './data.json';
 
 const root = document.getElementById('root');
 
-const userCard = (
-  <div>
+const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
+  return (
     <div>
-      <img src={data.avatar} alt="User avatar" />
-      <p>{data.username}</p>
-      <p>{data.tag}</p>
-      <p>{data.location}</p>
+      <div>
+        <img src={avatar} alt="User avatar" />
+        <p>{username}</p>
+        <p>@{tag}</p>
+        <p>{location}</p>
+      </div>
+      <ul>
+        <li>
+          <span>Followers</span>
+          <span>{followers}</span>
+        </li>
+        <li>
+          <span>Views</span>
+          <span>{views}</span>
+        </li>
+        <li>
+          <span>Likes</span>
+          <span>{likes}</span>
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li>
-        <span>Followers</span>
-        <span>{data.stats.followers}</span>
-      </li>
-      <li>
-        <span>Views</span>
-        <span>{data.stats.views}</span>
-      </li>
-      <li>
-        <span>Likes</span>
-        <span>{data.stats.likes}</span>
-      </li>
-    </ul>
-  </div>
+  );
+};
+ReactDOM.createRoot(root).render(
+  <Profile
+    username={data.username}
+    tag={data.tag}
+    location={data.location}
+    avatar={data.avatar}
+    stats={data.stats}
+  />
 );
-ReactDOM.createRoot(root).render(userCard);
-console.log(userCard);
 
-console.log(data);
+console.log(root);
