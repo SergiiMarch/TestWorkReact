@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.th,
+.td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.th:last-child,
+.td:last-child {
+  border-right: none; /* Удаляє праву межу для останнього стовпця */
+}
+
+.th {
+  background-color: #ef0202;
+  font-weight: bold;
+}
+
+.trEven {
+  background-color: #f9f9f9;
+}
+
+.trHover:hover {
+  background-color: #f1f1f1;
+}

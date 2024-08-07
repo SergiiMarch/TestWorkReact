@@ -1,0 +1,44 @@
+.container {
+  border: 2px solid rgb(5, 5, 5);
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picture {
+  width: 100px; /* Встановіть бажану ширину */
+  height: 100px; /* Встановіть таку ж висоту, щоб зображення було квадратним */
+  border-radius: 50%; /* Закруглення на 50%, щоб зробити зображення круглим */
+  object-fit: cover;
+  border: 1px solid rgb(5, 5, 5);
+  background-color: black;
+}
+.items {
+  width: 100%;
+  list-style-type: none;
+  /* padding: 0; */
+  /* margin-top: auto; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Зсуває .items до нижньої частини контейнера */
+}
+
+.label,
+.value {
+  display: block; /* Робить елементи блочними для відображення в стовпчик */
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px; /* Відступ між назвою і значенням */
+}
+
+.value {
+  font-weight: normal;
+}
