@@ -1,16 +1,7 @@
-import Profile from './Profile';
-import data from '../data.json';
-import friends from '../friends.json';
-import FriendsList from './FriendList/FriendList';
-import transactions from '../transactions.json';
-import TransactionHistory from './TransactionHistory/TransactionHistory';
+const App = () => {
+  const handleClick = () => {
+    alert("I'm a button!");
+  };
 
-export default function App() {
-  return (
-    <div>
-      <Profile data={data} />
-      <FriendsList friends={friends} />
-      <TransactionHistory transactions={transactions} />
-    </div>
-  );
-}
+  return <button onClick={handleClick}>Click me!</button>;
+};
